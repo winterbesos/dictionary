@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dictionary</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="navigator-bg"></div>
+    <div class="content-container">
+      <div class="navigator">
+        <a href="/nouns" class="inline-block">
+          <%= image_tag("logo_theme.png", class: "index-logo-src")%>
+        </a>
+        <%= form_with(url: nouns_path, class: 'search-bar', method: :get) do |form| %>
+          <%= form.text_field :keyword, class: 'search-input', value: params[:keyword] %>
+          <%= form.submit :Search %>
+        <% end %>
+      </div>
+
+      <div class="content-bg">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

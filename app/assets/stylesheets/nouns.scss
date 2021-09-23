@@ -1,0 +1,204 @@
+// Place all the styles related to the nouns controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$theme-color: #c52f24;
+$theme-hover-color: #980905;
+$theme-active-color: #760703;
+
+.hot-icon {
+  width: 20px;
+}
+
+.right-column {
+  width: 180px;
+}
+
+.left-column {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.hot-title {
+  display: block;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.item-container {
+  margin-bottom: 20px;
+}
+
+.result-column {
+  padding-top: 5px;
+}
+
+.item-title {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.item-description {
+  font: 13px/21px Arial,sans-serif;
+}
+
+.empty-item-view {
+  margin-top: 10px;
+}
+
+.empty-item-view span {
+  color: $theme-color;
+}
+
+.para {
+  font-size: 14px;
+  word-wrap: break-word;
+  color: #333;
+  margin-bottom: 15px;
+  text-indent: 2em;
+  line-height: 24px;
+  zoom: 1;
+}
+
+.lemma-title {
+  margin: 0 0 10px;
+}
+
+.cmn-clearfix:after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.basicInfo-item {
+  line-height: 26px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.basicInfo-item.name {
+  width: 90px;
+  padding: 0 5px 0 12px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  color: #999;
+}
+
+.basicInfo-item.value {
+  zoom: 1;
+  color: #333;
+  width: 285px;
+  float: left;
+  position: relative;
+  word-break: break-all;
+}
+
+.basic-info {
+  margin: 20px 0 35px;
+  clear: both;
+  background: url(https://bkssl.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/basicInfo/img/basicInfo-bg_ccaff81.png);
+}
+
+.basicInfo-block {
+  width: 395px;
+  float: left;
+}
+
+.create-item-btn {
+  border: solid 1px #d5d5d5;
+  padding: 4px;
+  font-size: 15px;
+  color: #666;
+  background-color: #eee;
+}
+
+.d-btn {
+  border: solid 1px $theme-color;
+  background-color: $theme-color;
+  padding: 4px;
+  font-size: 15px;
+  color: white;
+  min-width: 88px;
+  border-radius: 4px;
+  height: 35px;
+  cursor: pointer;
+}
+
+
+.d-btn:hover {
+  background-color: $theme-hover-color;
+}
+
+.d-btn:active {
+  background-color: $theme-active-color;
+}
+
+.noun-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.noun-content.right-column {
+  flex-basis: auto;
+}
+
+.noun-content > div:first-child {
+  flex: 1;
+}
+
+.inline {
+  display: inline;
+}
+
+.item-property-editor {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.item-property-editor label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.item-property-editor input {
+  height: 30px;
+  width: 400px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  line-height: 30px;
+  font-size: 14px;
+  outline: none;
+  padding-left: 6px;
+}
+
+.item-property-editor input:focus {
+  border: 1px solid $theme-color;
+}
+
+.item-property-editor textarea {
+  height: 150px;
+  width: 400px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  line-height: 30px;
+  font-size: 14px;
+  outline: none;
+  padding-left: 6px;
+}
+
+.item-property-editor textarea:focus {
+  border: 1px solid $theme-color;
+}

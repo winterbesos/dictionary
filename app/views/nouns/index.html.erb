@@ -1,0 +1,25 @@
+<div class="noun-content">
+	<div class="left-column">
+    <div class="result-column">
+			<% @nouns.each do |noun| %>
+				<div class="item-container">
+					<%= link_to noun.name, noun, class: 'item-title' %>
+					<div class="item-description">
+						<%= noun.description %>
+					</div>
+				</div>
+			<% end %>
+      
+      <% if @nouns.size == 0 %>
+				<div class="empty-item-view">
+					抱歉，没有找到与 “<span><%= @keyword %></span>” 相关的百科结果
+					<%= link_to '我来创建', new_noun_path + '?name=' + @keyword, class: 'create-item-btn' %>
+				</div>
+      <% end %>
+		</div>
+	</div>
+
+	<div class="right-column">
+		<%= render "hot", counters: @counters %>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <div class="hot-title">
+    <h3 class="inline">HOT</h3>
+    <%= image_tag("huo.png", class: "hot-icon inline")%>
+  </div>
+  <ul>
+    <% counters.each do |counter| %>
+      <li>
+        <%= link_to counter.countable.name, counter.countable %>
+      </li>
+    <% end %>
+  </ul>
+</div>

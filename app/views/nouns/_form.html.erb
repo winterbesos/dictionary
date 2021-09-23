@@ -1,0 +1,21 @@
+<%= form_with model: noun do |form| %>
+  <%= render "form_item", form: form, method: :s_name, text: '简称', errors: noun.errors %>
+
+  <%= render "form_item", form: form, method: :en_name, text: '英文', errors: noun.errors %>
+
+  <%= render "form_item", form: form, method: :en_s_name, text: '英文简称', errors: noun.errors %>
+
+  <div class="item-property-editor">
+    <%= form.label :description, '详细描述' %><br>
+    <%= form.text_area :description %><br>
+
+    <% noun.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit '更新词条', class: 'd-btn' %>
+  </div>
+<% end %>
+

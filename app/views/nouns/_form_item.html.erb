@@ -1,0 +1,8 @@
+  <div class="item-property-editor">
+    <%= form.label method, text %>
+    <%= form.text_field method %>
+    <% errors.full_messages_for(method).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+

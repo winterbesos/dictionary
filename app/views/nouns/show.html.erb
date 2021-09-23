@@ -1,0 +1,45 @@
+<br>
+<dl class="lemma-title">
+  <h2 class="inline margin-right-10"><%= @noun.name %></h2>
+  <%= link_to '编辑', edit_noun_path(@noun), class: 'create-item-btn' %>
+</dl>
+
+
+<div class="para">
+	<%= @noun.description %>
+</div>
+
+<div class="basic-info cmn-clearfix">
+  <dl class="basicInfo-block basicInfo-left">
+    <dt class="basicInfo-item name">简称</dt>
+    <dd class="basicInfo-item value">
+    <%= @noun.s_name %>
+    </dd>
+    <dt class="basicInfo-item name">别名</dt>
+    <dd class="basicInfo-item value">
+    n/a
+    </dd>
+  </dl>
+  <dl class="basicInfo-block basicInfo-right">
+    <dt class="basicInfo-item name">外文名</dt>
+    <dd class="basicInfo-item value">
+    <%= @noun.en_name %>
+    </dd>
+    <dt class="basicInfo-item name">外文名简称</dt>
+    <dd class="basicInfo-item value">
+    <%= @noun.en_s_name %>
+    </dd>
+  </dl>
+</div>
+
+<!--
+<div>
+  <ul>
+    <% @noun.records.each do |record| %>
+      <li>
+        <%= "#{record.created_at} #{record.operation} #{record.content}" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+-->
